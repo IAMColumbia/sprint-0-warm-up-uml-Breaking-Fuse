@@ -32,13 +32,13 @@ namespace Sprint_0_Warm_Up
                  */
 
                 WriteLine("\nAireplaneTakeOffTests...............................................................");
-                WriteLine("\nCall ap.TakeOff():");
+                WriteLine("\n--Call ap.TakeOff():");
                 //Test take off should fail engine isn't started
                 WriteLine(ap.TakeOff());  //Don't take off engine isn't started
                 /* Output:
                  * OOPFlyingVehicleMidterm.Airplane can't fly it's engine is not started.
                  */
-                WriteLine("\nCall ap.StartEngine():");
+                WriteLine("\n--Call ap.StartEngine():");
                 ap.StartEngine();
                 WriteLine(ap.TakeOff());  //take off engine is started
                 /* Output:
@@ -47,13 +47,13 @@ namespace Sprint_0_Warm_Up
 
                 //Fly up
                 WriteLine("\nFly up Tests...................................................................");
-                WriteLine("Call ap.FlyUp() fly to 1,000ft default");
+                WriteLine("--Call ap.FlyUp() fly to 1,000ft default");
                 ap.FlyUp();    //Fly up tp 1,000 ft
                 WriteLine(ap.About());
-                WriteLine("\nCall ap.FlyUp(44000) Fly up to 45,000ft:");
+                WriteLine("\n--Call ap.FlyUp(44000) Fly up to 45,000ft:");
                 ap.FlyUp(44000);    //Fly up tp 45,000 ft shouldn't work
                 WriteLine(ap.About());
-                WriteLine("\nCall ap.FlyUp(44000) Fly up another 40,000ft shouldn't work");
+                WriteLine("\n--Call ap.FlyUp(44000) Fly up another 40,000ft shouldn't work");
                 ap.FlyUp(40000);    //Fly up tp 41,000 ft shouldn't work
                 WriteLine(ap.About());
                 /*
@@ -62,10 +62,10 @@ namespace Sprint_0_Warm_Up
 
                 //Land
                 WriteLine("\nFly Down.................................................................");
-                WriteLine("Call ap.FlyDown(50000) Fly Down 50,000 ft");
+                WriteLine("--Call ap.FlyDown(50000) Fly Down 50,000 ft");
                 ap.FlyDown(50000);   //Land by floying down 50,000 ft = Crash and shouldn't work
                 WriteLine(ap.About());
-                WriteLine("Call ap.FlyDown(ap.CurrentAltitude) this should land");
+                WriteLine("--Call ap.FlyDown(ap.CurrentAltitude) this should land");
                 ap.FlyDown(ap.CurrentAltitude); //Land by flying down current altitiute
                 WriteLine(ap.About());
             }
