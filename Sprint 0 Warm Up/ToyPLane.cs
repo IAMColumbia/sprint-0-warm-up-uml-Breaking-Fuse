@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace Sprint_0_Warm_Up
 {
-    class ToyPlane : Airplane
+    public class ToyPlane : Airplane
     {
         private bool isWoundUp;
 
@@ -16,7 +16,7 @@ namespace Sprint_0_Warm_Up
 
         public override string About()
         {
-            return base.About() + getWindUpString();
+            return base.About() + GetWindUpString();
         }
 
         public override string TakeOff()
@@ -29,7 +29,7 @@ namespace Sprint_0_Warm_Up
             }
         }
 
-        private string getWindUpString()
+        public string GetWindUpString()
         {
             if (isWoundUp) return $"{this} is wound up.";
             else
@@ -53,10 +53,19 @@ namespace Sprint_0_Warm_Up
             isWoundUp = true;
         }
 
-        private void UnWind()
+        public void UnWind()
         {
             isWoundUp = false;
         }
 
+        public override void FlyUp()
+        {
+            CurrentAltitude += 5;
+        }
+
+        public override void FlyUp(int HowManyFeet)
+        {
+            CurrentAltitude += 5 + HowManyFeet;
+        }
     }
 }

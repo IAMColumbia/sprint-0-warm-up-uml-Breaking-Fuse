@@ -9,7 +9,7 @@ namespace Sprint_0_Warm_Up
         public int CurrentAltitude { get; set; }
         public int MaxAltitude { get; set; }
         public bool IsFlying { get; set; }
-        protected Engine Engine { get; set; }
+        public Engine Engine { get; set; }
 
         public AerialVehicle()
         {
@@ -23,7 +23,7 @@ namespace Sprint_0_Warm_Up
                 $"{GetEngineStartedString()}";
         }
 
-        private string GetEngineStartedString()
+        public string GetEngineStartedString()
         {
             return Engine.About();
         }
@@ -49,7 +49,7 @@ namespace Sprint_0_Warm_Up
 
 
         //Flying up Above MaxAltitude should result in CurrentAltitude of Max Altitude
-        internal void FlyUp()
+        public virtual void FlyUp()
         {
             if (IsFlying)
             {
@@ -66,7 +66,7 @@ namespace Sprint_0_Warm_Up
             }
         }
 
-        internal void FlyUp(int HowManyFeet)
+        public virtual void FlyUp(int HowManyFeet)
         {
             if (IsFlying)
             {
@@ -74,7 +74,7 @@ namespace Sprint_0_Warm_Up
                 if (CurrentAltitude > MaxAltitude) 
                 {
                     WriteLine($"{this} can't fly any higher than {MaxAltitude} ft.");
-                    CurrentAltitude = MaxAltitude;
+                    CurrentAltitude -= 1000 + HowManyFeet;
                 }
             }
             else
@@ -86,7 +86,7 @@ namespace Sprint_0_Warm_Up
 
         //Flying down Below 0 ft should crash the vehicle. Flying down Current Altitude should land the vehicle
 
-        internal void FlyDown(int HowManyFeet)
+        public void FlyDown(int HowManyFeet)
         {
             if (IsFlying)
             {
