@@ -59,5 +59,12 @@
       <FileName>Helicopter.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Sprint_0_Warm_Up.Airport">
+    <Position X="1.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAACAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Airport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
